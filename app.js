@@ -26,9 +26,7 @@ app.use(limiter);
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 
-const dev_db_url =
-  "mongodb+srv://myAtlasDBUser:6F3Q2HMPo8qEa6aU@cluster0.os1ozvm.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
-const mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoDB = process.env.MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
